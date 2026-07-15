@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Andrew Douglass, PMP | Project Manager</title>
+<meta name="description" content="Andrew Douglass, PMP-certified Project Manager with 7+ years of hands-on experience in supply chain, procurement, and operations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0c0e12;
+    --bg-2: #12151b;
+    --card: #161a22;
+    --card-2: #1b2028;
+    --line: #262c38;
+    --line-soft: #20252f;
+    --blue: #2f9bff;
+    --blue-bright: #4dabff;
+    --blue-glow: rgba(47, 155, 255, 0.35);
+    --text: #eef2f8;
+    --text-soft: #aab4c4;
+    --text-dim: #7c8899;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+  h1, h2, h3 {
+    font-family: "Space Grotesk", "Inter", sans-serif;
+    line-height: 1.18; letter-spacing: -0.02em; font-weight: 700; color: #fff;
+  }
+
+  section { padding: 60px 0; border-bottom: 1px solid var(--line-soft); }
+  section:last-of-type { border-bottom: none; }
+
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--blue);
+    margin-bottom: 14px;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    position: relative;
+    padding: 92px 0 68px;
+    background:
+      radial-gradient(900px 420px at 15% -10%, rgba(47,155,255,0.16), transparent 60%),
+      linear-gradient(180deg, #0e1117 0%, var(--bg) 100%);
+    border-bottom: 1px solid var(--line);
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image: linear-gradient(var(--line-soft) 1px, transparent 1px),
+                      linear-gradient(90deg, var(--line-soft) 1px, transparent 1px);
+    background-size: 46px 46px;
+    opacity: 0.35;
+    mask-image: radial-gradient(600px 400px at 80% 0%, #000 0%, transparent 70%);
+    -webkit-mask-image: radial-gradient(600px 400px at 80% 0%, #000 0%, transparent 70%);
+  }
+  .hero .wrap { position: relative; }
+  .hero .tag {
+    display: inline-block;
+    font-size: 0.74rem; font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--blue-bright);
+    border: 1px solid var(--line);
+    background: rgba(47,155,255,0.08);
+    padding: 6px 14px; border-radius: 999px; margin-bottom: 22px;
+  }
+  .hero h1 {
+    font-size: clamp(2.1rem, 6.4vw, 3.3rem);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 700;
+  }
+  .hero .role {
+    font-size: clamp(1.05rem, 3vw, 1.4rem);
+    color: var(--blue); font-weight: 600; margin-bottom: 24px;
+  }
+  .hero .bio { font-size: 1.1rem; color: var(--text-soft); max-width: 660px; }
+  .hero .bio strong { color: #fff; }
+  .hero .hl { color: var(--blue-bright); font-weight: 700; }
+
+  /* ---------- VIDEO CARD ---------- */
+  .video-card {
+    background: linear-gradient(180deg, var(--card) 0%, var(--card-2) 100%);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 46px 28px;
+    text-align: center;
+    position: relative;
+  }
+  .video-card::after {
+    content: "";
+    position: absolute; inset: 0;
+    border-radius: 16px;
+    padding: 1px;
+    background: linear-gradient(140deg, rgba(47,155,255,0.4), transparent 40%);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor; mask-composite: exclude;
+    pointer-events: none;
+  }
+  .video-card .play {
+    width: 64px; height: 64px; margin: 0 auto 18px; border-radius: 50%;
+    background: var(--blue);
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 0 0 8px rgba(47,155,255,0.12), 0 8px 26px var(--blue-glow);
+  }
+  .video-card .play svg { width: 26px; height: 26px; fill: #fff; margin-left: 4px; }
+  .video-card h3 { font-size: 1.24rem; margin-bottom: 8px; }
+  .video-card p { color: var(--text-soft); font-size: 0.98rem; max-width: 500px; margin: 0 auto; }
+  .video-card .badge {
+    display: inline-block; margin-top: 16px; font-size: 0.7rem;
+    letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700;
+    color: var(--blue-bright); background: rgba(47,155,255,0.1);
+    border: 1px solid var(--line); padding: 5px 14px; border-radius: 999px;
+  }
+  .video-intro { color: var(--text-soft); margin-bottom: 22px; font-size: 1.03rem; }
+
+  /* ---------- STORY ---------- */
+  .story h2 { font-size: clamp(1.6rem, 4.5vw, 2.2rem); margin-bottom: 24px; }
+  .story p { font-size: 1.06rem; color: var(--text-soft); margin-bottom: 18px; }
+  .story p:last-child { margin-bottom: 0; }
+
+  /* ---------- CASE STUDIES ---------- */
+  .sec-title { font-size: clamp(1.6rem, 4.5vw, 2.2rem); margin-bottom: 6px; }
+  .case {
+    background: linear-gradient(180deg, var(--card) 0%, var(--card-2) 100%);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 28px 30px;
+    margin-top: 24px;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+  .case:hover { border-color: rgba(47,155,255,0.5); transform: translateY(-2px); }
+  .case h3 { font-size: 1.3rem; margin-bottom: 4px; }
+  .case .dates {
+    display: inline-block; font-size: 0.8rem; color: var(--blue);
+    font-weight: 600; margin-bottom: 18px;
+  }
+  .case .par { margin-bottom: 14px; }
+  .case .par:last-child { margin-bottom: 0; }
+  .case .label {
+    display: block; text-transform: uppercase; letter-spacing: 0.16em;
+    font-size: 0.68rem; font-weight: 700; color: var(--blue); margin-bottom: 3px;
+  }
+  .case .par span.label + br { display: none; }
+  .case .par.problem, .case .par.approach { color: var(--text-soft); }
+  .case .par.result { color: var(--text); font-weight: 500; }
+  .case .par.result .label { color: var(--blue-bright); }
+
+  /* ---------- SKILLS ---------- */
+  .skills { display: flex; flex-wrap: wrap; gap: 10px; }
+  .skills span {
+    background: var(--card);
+    border: 1px solid var(--line);
+    color: var(--text-soft);
+    padding: 9px 16px; border-radius: 8px; font-size: 0.92rem; font-weight: 500;
+    transition: border-color 0.15s ease, color 0.15s ease;
+  }
+  .skills span:hover { border-color: var(--blue); color: #fff; }
+
+  /* ---------- TESTIMONIAL ---------- */
+  .testimonial {
+    background: linear-gradient(180deg, var(--card) 0%, var(--card-2) 100%);
+    border: 1px dashed var(--blue);
+    border-radius: 16px; padding: 42px 28px; text-align: center;
+  }
+  .testimonial .quote-mark { font-family: Georgia, serif; font-size: 3rem; color: var(--blue); line-height: 0.6; }
+  .testimonial p { color: var(--text-soft); max-width: 520px; margin: 12px auto 0; }
+  .testimonial .badge {
+    display: inline-block; margin-top: 16px; font-size: 0.7rem;
+    letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700;
+    color: var(--blue-bright); background: rgba(47,155,255,0.1);
+    border: 1px solid var(--line); padding: 5px 14px; border-radius: 999px;
+  }
+
+  /* ---------- RESUME ---------- */
+  .resume { text-align: center; }
+  .resume p { color: var(--text-soft); margin-bottom: 24px; }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--blue); color: #fff; text-decoration: none;
+    padding: 15px 32px; border-radius: 10px; font-weight: 600; font-size: 1rem;
+    box-shadow: 0 8px 24px var(--blue-glow);
+    transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+  }
+  .btn:hover { background: var(--blue-bright); transform: translateY(-2px); box-shadow: 0 10px 30px var(--blue-glow); }
+  .btn svg { width: 18px; height: 18px; fill: #fff; }
+
+  /* ---------- CONTACT ---------- */
+  .contact {
+    text-align: center; border-bottom: none;
+    background:
+      radial-gradient(700px 340px at 50% 120%, rgba(47,155,255,0.18), transparent 65%),
+      linear-gradient(180deg, var(--bg) 0%, #0e1117 100%);
+  }
+  .contact h2 { font-size: clamp(1.9rem, 5.5vw, 2.7rem); margin-bottom: 8px; }
+  .contact .sub { color: var(--text-soft); margin-bottom: 32px; font-size: 1.08rem; }
+  .contact-links { display: flex; flex-direction: column; gap: 14px; align-items: center; }
+  .contact-links a {
+    color: var(--text); text-decoration: none; font-size: 1.1rem;
+    display: inline-flex; align-items: center; gap: 10px;
+  }
+  .contact-links a:hover { color: var(--blue-bright); }
+  .contact-links .ic { width: 20px; height: 20px; fill: var(--blue); flex-shrink: 0; }
+
+  footer { text-align: center; padding: 28px 0; color: var(--text-dim); font-size: 0.85rem; background: #0e1117; }
+
+  @media (max-width: 600px) {
+    section { padding: 46px 0; }
+    .hero { padding: 66px 0 48px; }
+    .case { padding: 22px; }
+    .video-card { padding: 34px 20px; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- ===== HERO / INTRO ===== -->
+  <header class="hero">
+    <div class="wrap">
+      <span class="tag">PMP-Certified · 7+ Years Hands-On</span>
+      <h1>Andrew Douglass</h1>
+      <div class="role">PMP-Certified Project Manager</div>
+      <p class="bio">
+        I earned my PMP because it reflects the work I've already been doing for years, not a
+        credential I chased to fill a resume line. Over seven years of hands-on project work, I drove
+        <span class="hl">230%+ revenue growth</span> at YOLO Board &amp; Bike by leading the company's
+        move into electric bikes, from supplier sourcing to quality resolution. I don't wait to be
+        handed expertise, I go get it, and I bring that same ownership to every team I'm on.
+      </p>
+    </div>
+  </header>
+
+  <!-- ===== INTRO VIDEO PLACEHOLDER ===== -->
+  <section id="intro-video">
+    <div class="wrap">
+      <div class="eyebrow">A Quick Hello</div>
+      <div class="video-card">
+        <div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <h3>Personal Introduction Video</h3>
+        <p>A short video introduction is on the way. Check back soon to hear directly from me about who I am and how I work.</p>
+        <span class="badge">Coming Soon</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MY STORY ===== -->
+  <section id="story" class="story">
+    <div class="wrap">
+      <div class="eyebrow">My Story</div>
+      <h2>How I Actually Became a Project Manager</h2>
+      <p>I didn't take the traditional path into project management. I started in the warehouse, shipping and retail, learning the business from the ground up. Around the time I found out I was going to be a father, I pitched the owner on a franchise expansion model to open a location in Pensacola. He saw a bigger opportunity for me instead — the company was about to go heavy into electric bikes, and he pointed me toward leading that growth.</p>
+      <p>I had no formal background in it, so I taught myself — research, videos, hands-on trial and error — while still carrying my normal day-to-day warehouse and retail responsibilities. I was the only one willing to take that on, so I made it mine. That's where I really became a project manager, not from a classroom, but from figuring it out in real time and owning the results.</p>
+      <p>Along the way, I managed a team of 5-10 employees, handling scheduling, accountability, and performance. No bachelor's degree, just seven years of hands-on work solving real problems, from keeping supply chains running through COVID to resolving quality issues that could have cost us a major account. My PMP wasn't something I chased for a resume line, it's a reflection of work I'd already been doing.</p>
+      <p>Since 2024, I've kept steady income through insurance sales and delivery driving while completing my PMP and finding the right next opportunity — that's the same ownership mindset, just applied to a career transition instead of a warehouse floor. That's the kind of project manager I am — I don't wait to be handed expertise, I go get it, and I bring that same ownership and honesty to every team I'm on.</p>
+    </div>
+  </section>
+
+  <!-- ===== CASE STUDIES ===== -->
+  <section id="case-studies">
+    <div class="wrap">
+      <div class="eyebrow">Case Studies</div>
+      <h2 class="sec-title">Real Problems, Real Results</h2>
+
+      <div class="case">
+        <h3>International Supply Chain Coordination During COVID-19</h3>
+        <span class="dates">July 2020 – February 2022</span>
+        <div class="par problem"><span class="label">Problem</span>Supply risk emerged from extended lead times and surging demand for outdoor recreation products, especially hydraulic brake components.</div>
+        <div class="par approach"><span class="label">Approach</span>I evaluated alternative suppliers, coordinated directly with international manufacturers, managed prototype testing and validation, and directed air freight logistics for prototype shipments. I tracked supplier lead times and adjusted procurement strategy in real time.</div>
+        <div class="par result"><span class="label">Result</span>Approved components for production, coordinated container shipments (~$150K per order), and maintained product availability that supported revenue growth during peak demand.</div>
+      </div>
+
+      <div class="case">
+        <h3>Handlebar Quality Resolution for a Key Customer Account</h3>
+        <span class="dates">2022</span>
+        <div class="par problem"><span class="label">Problem</span>A high-volume customer account had recurring handlebar quality issues across a fleet of e-bikes deployed at 200-250 properties, risking the relationship.</div>
+        <div class="par approach"><span class="label">Approach</span>I defined quality requirements, built a testing and validation strategy for replacement components, coordinated prototype testing (including brake component inspection under real-world conditions), and managed customer feedback loops. Resolved over roughly four months.</div>
+        <div class="par result"><span class="label">Result</span>Selected and implemented an approved handlebar solution, resolved the quality issue, and preserved the customer partnership across all deployed properties.</div>
+      </div>
+
+      <div class="case">
+        <h3>Digital Repair Workflow Implementation (Shopify)</h3>
+        <span class="dates">Process Design &amp; Implementation</span>
+        <div class="par problem"><span class="label">Problem</span>Repair requests were handled entirely manually, causing communication delays, inconsistent customer experience, high administrative workload, and no visibility into repair status.</div>
+        <div class="par approach"><span class="label">Approach</span>I identified the inefficiencies in the manual process and designed an end-to-end digital workflow using Shopify, covering the full customer journey: online repair request submission, digital invoicing, service scheduling, and streamlined payment. I built the customer-facing intake and service flow myself, led the implementation, and iterated on it based on real-world usage and feedback.</div>
+        <div class="par result"><span class="label">Result</span>Significantly reduced manual administrative workload, improved customer transparency and experience, and created a scalable, repeatable workflow that increased efficiency across service operations.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MONDAY.COM WALKTHROUGH ===== -->
+  <section id="monday">
+    <div class="wrap">
+      <div class="eyebrow">Monday.com Walkthrough</div>
+      <h2 class="sec-title" style="margin-bottom:18px;">How I Structure My Work</h2>
+      <p class="video-intro">A look at how I structure and manage projects in Monday.com, walking through a board I built for [project].</p>
+      <div class="video-card">
+        <div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <h3>Prerecorded Monday.com Board Walkthrough</h3>
+        <p>A prerecorded walkthrough of a board I actually built, narrating my process and thinking, not a live-expert demo. Coming soon.</p>
+        <span class="badge">Coming Soon</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS & TOOLS ===== -->
+  <section id="skills">
+    <div class="wrap">
+      <div class="eyebrow">Skills &amp; Tools</div>
+      <h2 class="sec-title" style="margin-bottom:22px;">What I Bring to the Table</h2>
+      <div class="skills">
+        <span>Project Management</span>
+        <span>PMP</span>
+        <span>Monday.com</span>
+        <span>Shopify</span>
+        <span>Procurement &amp; Vendor Management</span>
+        <span>Supply Chain Coordination</span>
+        <span>Stakeholder Communication</span>
+        <span>Risk Management</span>
+        <span>Budget &amp; Financial Tracking</span>
+        <span>Team Leadership</span>
+        <span>Google Workspace</span>
+        <span>Excel</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIAL ===== -->
+  <section id="testimonial">
+    <div class="wrap">
+      <div class="eyebrow">Reference</div>
+      <div class="testimonial">
+        <div class="quote-mark">&ldquo;</div>
+        <p>A recommendation from someone I've worked with is on the way and will live here soon.</p>
+        <span class="badge">Coming Soon</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESUME DOWNLOAD ===== -->
+  <section id="resume" class="resume">
+    <div class="wrap">
+      <div class="eyebrow">Resume</div>
+      <h2 class="sec-title">Want the Full Picture?</h2>
+      <p>Download my full resume for the complete work history and details.</p>
+      <a class="btn" href="resume.pdf" download>
+        <svg viewBox="0 0 24 24"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-8 2h16v2H4v-2z"/></svg>
+        Download Resume
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT / CTA ===== -->
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2>Let's Talk</h2>
+      <p class="sub">Have a project that needs an owner? Let's connect.</p>
+      <div class="contact-links">
+        <a href="tel:+16039864878">
+          <svg class="ic" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.2 1l-2.3 2.2z"/></svg>
+          (603) 986-4878
+        </a>
+        <a href="mailto:douglasspjmg@gmail.com">
+          <svg class="ic" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm8 7L4 6.5V6l8 4.5L20 6v.5L12 11z"/></svg>
+          douglasspjmg@gmail.com
+        </a>
+        <a href="https://linkedin.com/in/andrew-douglass-2a48b5197" target="_blank" rel="noopener">
+          <svg class="ic" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.3 18V10H5.7v8h2.6zM7 8.8a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM18.3 18v-4.4c0-2.4-1.3-3.5-3-3.5-1.4 0-2 .8-2.3 1.3V10h-2.6v8h2.6v-4.5c0-.2 0-.5.1-.6.2-.5.6-1 1.4-1 .9 0 1.3.7 1.3 1.8V18h2.5z"/></svg>
+          linkedin.com/in/andrew-douglass-2a48b5197
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2026 Andrew Douglass · PMP-Certified Project Manager
+  </footer>
+
+</body>
+</html>
